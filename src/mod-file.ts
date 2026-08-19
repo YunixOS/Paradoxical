@@ -1,6 +1,7 @@
 import { Container } from "./node";
 import { Serializer } from "./Serialization/serializer";
-import * as fs from 'node:fs';
+import fs from "node:fs";
+import path from "node:path";
 
 export class ModFile {
     constructor(
@@ -23,6 +24,6 @@ export class ModFile {
     }
 
     write(): void {
-        fs.writeFileSync(this.path, this.serialize());
+        fs.writeFileSync(path.join(this.path, this.name), this.serialize());
     }
 }

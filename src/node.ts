@@ -1,4 +1,4 @@
-import { Value, Operator } from "./types";
+import type { Value, Operator } from "./types";
 
 export type Node = Unit | Clause | Container;
 
@@ -19,7 +19,9 @@ export class Clause {
 export class Container {
     public readonly children: Node[] = [];
 
-    constructor(public readonly name?: string) {}
+    constructor(
+        public readonly name?: string
+    ) {}
 
     addClause(name: string, value: Value): Clause {
         const clause = new Clause(name, value);
@@ -27,7 +29,13 @@ export class Container {
         return clause;
     }
 
-    addContainer(name: string): Container {
+    addContainer(name?: string): Container {
+        if(name === undefined) {
+            const container = new Container();
+            this.children.push(container);
+            return container;
+        }
+
         const container = new Container(name);
         this.children.push(container);
         return container;

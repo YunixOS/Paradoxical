@@ -1,7 +1,7 @@
 {
   "name": "paradoxical",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.1.0",
+  "description": "Create Clausewitz engine mod files using JavaScript",
   "license": "ISC",
   "author": "",
   "type": "module",
@@ -14,7 +14,7 @@
     "test": "tests"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "npx rollup -c",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
   },
   "dependencies": {
@@ -22,8 +22,13 @@
   },
   "devDependencies": {
     "@jest/globals": "^30.4.1",
+    "@rollup/plugin-node-resolve": "^16.0.3",
+    "@rollup/plugin-typescript": "^12.3.0",
     "@types/jest": "^30.0.0",
     "jest": "^30.4.2",
     "ts-jest": "^29.4.11"
+  },
+  "allowScripts": {
+    "unrs-resolver@1.12.2": true
   }
 }

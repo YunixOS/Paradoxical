@@ -47,6 +47,36 @@ describe("Serializer", () => {
         ].join("\n"));
     });
 
+    it("Serializes an anonymous container", () => {
+        const anonymousContainer = new Container();
+        anonymousContainer.addClause("population", 123);
+
+        expect(Serializer.serialize(anonymousContainer)).toBe([
+            "{",
+            "\tpopulation = 123",
+            "}"
+        ].join("\n"));
+    });
+
+    it("Serializes a multi-line list", () => {
+        const list = new Container("box_contents");
+        const listItem1 = list.addContainer();
+        const listItem2 = list.addContainer();
+        listItem1.addClause("amount", 20);
+        listItem2.addClause("amount", 67);
+
+        expect(Serializer.serialize(list)).toBe([
+            "box_contents = {",
+            "\t{",
+            "\t\tamount = 20",
+            "\t}",
+            "\t{",
+            "\t\tamount = 67",
+            "\t}",
+            "}"
+        ].join("\n"));
+    });
+
     it("serializes deeply nested containers", () => {
         const country = new Container("country");
         country.addClause("capital", keyword("Yuitopia"));
