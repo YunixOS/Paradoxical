@@ -1,4 +1,4 @@
-import { Clause, Container } from './Node';
+import { Clause, Container } from './node';
 
 describe("Container", () => {
     it("is empty on creation", () => {

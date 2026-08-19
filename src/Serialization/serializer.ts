@@ -1,5 +1,6 @@
-import { Value } from "../Types";
-import { Node, Container } from "../Node"
+import { Value } from "../types";
+import { Node, Container } from "../node";
+import { Keyword } from "../Value/Keyword";
 
 export class Serializer {
     static serialize(node: Node, depth:number = 0) {
@@ -16,9 +17,13 @@ export class Serializer {
         return `${indent}${node.name} ${node.operator} ${this.serializeValue(node.value)}`;
     }
 
-    private static serializeValue(value: Value): string {
+   private static serializeValue(value: Value): string {
         if (typeof value === "string") {
-            return value;
+            return `\"${value}\"`;
+        }
+
+        if (value instanceof Keyword) {
+            return String(value.value)
         }
 
         return String(value);

@@ -1,6 +1,12 @@
-import { Value, Operator } from "./Types";
+import { Value, Operator } from "./types";
 
-export type Node = Clause | Container;
+export type Node = Unit | Clause | Container;
+
+export class Unit {
+    constructor(
+        public readonly value: Value,
+    ) {}
+}
 
 export class Clause {
     constructor(
@@ -13,7 +19,7 @@ export class Clause {
 export class Container {
     public readonly children: Node[] = [];
 
-    constructor(public readonly name: string) {}
+    constructor(public readonly name?: string) {}
 
     addClause(name: string, value: Value): Clause {
         const clause = new Clause(name, value);
