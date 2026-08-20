@@ -1,18 +1,25 @@
 {
-  "name": "paradoxical",
+  "name": "@yunixos/paradoxical",
   "version": "0.1.0",
   "description": "Create Clausewitz engine mod files using JavaScript",
+  "homepage": "https://github.com/YunixOS/Paradoxical",
+  "bugs": {
+    "url": "https://github.com/YunixOS/Paradoxical/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YunixOS/Paradoxical.git"
+  },
   "license": "ISC",
-  "author": "",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "directories": {
+    "doc": "docs"
+  },
   "files": [
     "/dist"
   ],
-  "directories": {
-    "test": "tests"
-  },
   "scripts": {
     "build": "npx rollup -c",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
@@ -32,13 +39,5 @@
   },
   "allowScripts": {
     "unrs-resolver@1.12.2": true
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/YunixOS/Paradoxical.git"
-  },
-  "homepage": "https://github.com/YunixOS/Paradoxical",
-  "bugs": {
-    "url": "https://github.com/YunixOS/Paradoxical/issues"
   }
 }
