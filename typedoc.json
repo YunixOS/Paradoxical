@@ -5,5 +5,7 @@
         "src/index.ts"
     ],
     "out": "docs",
-    "githubPages": true
+    "githubPages": true,
+    "plugin": ["typedoc-rhineai-theme"],
+    "readme": "README_DOCS.md"
 }
