@@ -8,10 +8,10 @@ Clausewitz mod files, allowing mods to be generated programmatically.
 - Generate mod files within JS/TS.
 - Generate localisation files using JS/TS (W.I.P (soon™)). 
 ## Installation
-Coming soon
+`npm install @yunixos/paradoxical`
 ## Quick Start - Create your first mod file
 ``` typescript
-import { ModFile } from "paradoxical";
+import { ModFile } from "@yunixos/paradoxical";
 
 const file = new ModFile("./", "hello.txt"); // Path and filename (including extension) 
 
