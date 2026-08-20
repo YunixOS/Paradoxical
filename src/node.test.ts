@@ -1,10 +1,19 @@
-import { Clause, Container } from './node';
+import { Clause, Container, Unit } from './node';
 
 describe("Container", () => {
     it("is empty on creation", () => {
         const country = new Container("country");
 
         expect(country.children).toEqual([]);
+    });
+
+    it("adds a unit", () => {
+        const container = new Container();
+        const unit = container.addUnit(true);
+
+        expect(unit).toBeInstanceOf(Unit)
+        expect(container.children).toContain(unit);
+        expect(unit.value).toBe(true);
     });
 
     it("adds a clause", () => {
@@ -41,5 +50,17 @@ describe("Container", () => {
         expect(economy.children).toHaveLength(1);
 
         expect(economy.children[0]).toBeInstanceOf(Clause);
+    });
+});
+
+describe("Clause", () => {
+    it("has = operator by default", () => {
+        const clause = new Clause("dr_pepper", "delicious");
+        expect(clause.operator).toEqual("=");
+    });
+
+    it("can have different assigned operators", () => {
+        const clause = new Clause("population", 200, ">");
+        expect(clause.operator).toEqual(">");
     });
 });

@@ -14,6 +14,8 @@ export default {
         nodeResolve({
             preferBuiltins: true
         }),
-        typescript()
+        typescript({
+            tsconfig: "./tsconfig.build.json"
+        })
     ]
 };

@@ -1,7 +1,7 @@
 export { ModFile } from "./mod-file";
 export { Clause, Container, Unit } from "./node";
-export { Serializer } from "./Serialization/serializer";
-export { keyword } from "./Value/Keyword"
+export type { Node } from "./node";
+export { keyword, Keyword } from "./Value/Keyword"
 
 export type {
     Value,

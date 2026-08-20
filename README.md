@@ -1,7 +1,6 @@
-# Paradoxical
-Create Clausewitz Engine mods using TypeScript.
+Create Clausewitz Engine mods using JavaScript or TypeScript.
 
-Paradoxical provides a TypeScript API for constructing and serialising
+Paradoxical provides an API for constructing and serialising
 Clausewitz mod files, allowing mods to be generated programmatically.
 
 ## Features
@@ -22,7 +21,7 @@ container.addClause("text", "hello world"); // Add a clause "text = "hello world
 file.write(); // Writes the file to specified location
 ```
 This should output a file in the root directory called hello.txt that contains the following:
-```
+```text
 message = {
 	text = "hello world"
 }
@@ -35,14 +34,14 @@ const file = new ModFile("./", "hello.txt");
 ```
 ### Values
 Any clause value can be either a string, number, boolean, or Keyword (string without quotes).
-#### string vs Keyword
+#### String vs Keyword
 There is an important note regarding strings in Paradoxical. A raw string used as a value will always be serialised with surrounding quotation marks. There are many occasions however where one needs to instead have the value be a "Keyword" (a string value absent quotation marks). To account for this, one can use the `keyword()` helper function to create a keyword value that will not have surrounding quotes.
 
 Raw string:
 ``` typescript
 file.addClause("value", "string")
 ```
-```
+```text
 value = "string"
 ```
 
@@ -50,7 +49,7 @@ Keyword:
 ``` typescript
 file.addClause("value", keyword("keyword"))
 ```
-```
+```text
 value = keyword
 ```
 
@@ -61,7 +60,7 @@ A unit is the most basic node, consisting merely of a lonesome value.
 ``` typescript
 const unit = file.addUnit(keyword("value"));
 ```
-```
+```text
 value
 ```
 #### Clause
@@ -69,7 +68,7 @@ A clause is an expression involving both a key and a value.
 ``` typescript
 const clause = file.addClause("name", "value");
 ```
-```
+```text
 name = "value"
 ```
 #### Container
@@ -79,17 +78,10 @@ const container = file.addContainer("container");
 const subcontainer = container.addContainer();
 subcontainer.addClause("name", "value");
 ```
-```
+```text
 container = {
   {
     name = "value"
   }
 }
 ```
-## Development
-1. Clone the repo.
-2. npm install
-3. profit?
-
-Test: npm run test
-Build: npm run build
