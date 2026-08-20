@@ -1,3 +1,1 @@
-404 License Not Found
-
-Just do whatever you want man.
+There is no license. Just do whatever you want :)
