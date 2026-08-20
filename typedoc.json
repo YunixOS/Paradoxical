@@ -6,6 +6,6 @@
     ],
     "out": "docs",
     "githubPages": true,
-    "plugin": ["typedoc-rhineai-theme"],
+    "plugin": ["typedoc-theme-fresh"],
     "readme": "README_DOCS.md"
 }

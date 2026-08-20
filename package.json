@@ -36,7 +36,7 @@
     "jest": "^30.4.2",
     "ts-jest": "^29.4.11",
     "typedoc": "^0.28.20",
-    "typedoc-rhineai-theme": "^1.2.0"
+    "typedoc-theme-fresh": "^0.2.3"
   },
   "allowScripts": {
     "unrs-resolver@1.12.2": true
