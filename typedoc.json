@@ -6,6 +6,5 @@
     ],
     "out": "docs",
     "githubPages": true,
-    "plugin": ["typedoc-theme-fresh"],
     "readme": "README_DOCS.md"
 }
