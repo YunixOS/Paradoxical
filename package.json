@@ -32,5 +32,13 @@
   },
   "allowScripts": {
     "unrs-resolver@1.12.2": true
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YunixOS/Paradoxical.git"
+  },
+  "homepage": "https://github.com/YunixOS/Paradoxical",
+  "bugs": {
+    "url": "https://github.com/YunixOS/Paradoxical/issues"
   }
 }
