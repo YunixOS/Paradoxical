@@ -36,7 +36,7 @@ const file = new ModFile("./", "hello.txt");
 ### Values
 Any clause value can be either a string, number, boolean, or Keyword (string without quotes).
 #### String vs Keyword
-There is an important note regarding strings in Paradoxical. A raw string used as a value will always be serialised with surrounding quotation marks. There are many occasions however where one needs to instead have the value be a "Keyword" (a string value absent quotation marks). To account for this, one can use the `keyword()` helper function to create a keyword value that will not have surrounding quotes.
+There is an important thing to note regarding strings in Paradoxical. A raw string used as a value will always be serialised with surrounding quotation marks. There are many occasions however where one needs to instead have the value be a "Keyword" (a string value absent quotation marks). To account for this, one can use the `keyword()` helper function to create a keyword value that will not have surrounding quotes.
 
 Raw string:
 ``` typescript
