@@ -1,4 +1,3 @@
-# Paradoxical
 Create Clausewitz Engine mods using JavaScript or TypeScript.
 
 Paradoxical provides an API for constructing and serialising
