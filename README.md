@@ -73,7 +73,7 @@ const clause = file.addClause("name", "value");
 name = "value"
 ```
 #### Container
-A container is a type of node the contains other nodes. They often will have a name, but can also be anonymous.
+A container is a type of node that contains other nodes. They often will have a name, but can also be anonymous.
 ``` typescript
 const container = file.addContainer("container");
 const subcontainer = container.addContainer();
