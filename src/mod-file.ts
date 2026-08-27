@@ -97,7 +97,7 @@ export class ModFile {
     */
     serialize(): string {
         return this.content
-            .map(clause => Serializer.serialize(clause))
+            .map(content => Serializer.serialize(content))
             .join("\n\n");
     }
 
