@@ -93,6 +93,20 @@ export class ModFile {
     }
 
     /**
+     * Adds any {@link Node} to the file.
+     *
+     * @param node The node to add to the file.
+     * @example
+     * ```ts
+     * file.add(new Clause("foo", "bar"));
+     * ```
+    */
+    add<T extends Node>(node: T): T {
+        this.content.push(node);
+        return node;
+    }
+
+    /**
      * Serializes the data and returns it as a string.
     */
     serialize(): string {

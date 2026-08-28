@@ -72,7 +72,7 @@ export class Clause {
  * ```
  */
 export class Container {
-    public readonly children: Node[] = [];
+    public children: Node[] = [];
 
     /**
     * @param name - The name of the container. Leaving empty will leave the container anonymous.
@@ -132,5 +132,19 @@ export class Container {
         const container = new Container(name);
         this.children.push(container);
         return container;
+    }
+
+    /**
+     * Adds any {@link Node} to the container.
+     *
+     * @param node The node to add to the container.
+     * @example
+     * ```ts
+     * container.add(new Clause("foo", "bar"));
+     * ```
+    */
+    add<T extends Node>(node: T): T {
+        this.children.push(node);
+        return node;
     }
 }

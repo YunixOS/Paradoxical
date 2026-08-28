@@ -4,7 +4,7 @@ import { keyword } from "./Value/Keyword";
 
 describe("ModFile", () => {
     it("Serializes contents", () => {
-        const drinkFile = new ModFile("~/Documents", "drink_file.txt")
+        const drinkFile = new ModFile("~/Documents", "drink_file.txt");
 
         const drPepper = drinkFile.addContainer("dr_pepper");
         drPepper.addClause("flavour", keyword("delicious"));

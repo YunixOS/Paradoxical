@@ -51,6 +51,15 @@ describe("Container", () => {
 
         expect(economy.children[0]).toBeInstanceOf(Clause);
     });
+
+    it("adds any node passed as an argument", () => {
+        const country = new Container("country");
+        const japan = country.add(new Container("Japan"));
+        const population = japan.add(new Clause("population", 23690820));
+
+        expect(country.children).toContain(japan);
+        expect(japan.children).toContain(population);
+    });
 });
 
 describe("Clause", () => {
