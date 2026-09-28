@@ -2,10 +2,7 @@ Create Clausewitz Engine mods using JavaScript or TypeScript.
 
 Paradoxical provides an API for constructing and serialising
 Clausewitz mod files, allowing mods to be generated programmatically.
-
-## Features
-- Generate mod files within JS/TS.
-- Generate localisation files using JS/TS (W.I.P (soon™)). 
+ 
 ## Installation
 `npm install @yunixos/paradoxical`
 ## Quick Start - Create your first mod file

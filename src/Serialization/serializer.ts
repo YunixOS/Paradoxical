@@ -20,7 +20,7 @@ export class Serializer {
         }
 
         if (node instanceof Unit) {
-            return `${indent}${node.value}`
+            return `${indent}${this.serializeValue(node.value)}`
         }
 
         return `${indent}${node.name} ${node.operator} ${this.serializeValue(node.value)}`;
