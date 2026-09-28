@@ -1,6 +1,6 @@
 {
   "name": "@yunixos/paradoxical",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Create Clausewitz engine mod files using JavaScript",
   "homepage": "https://github.com/YunixOS/Paradoxical",
   "bugs": {
