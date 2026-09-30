@@ -119,6 +119,9 @@ export class ModFile {
      * Serializes the data and outputs to the file at the path.
     */
     write(): void {
-        fs.writeFileSync(path.join(this.path, this.name), this.serialize());
+        const filePath = path.join(this.path, this.name);
+
+        fs.mkdirSync(this.path, { recursive: true });
+        fs.writeFileSync(filePath, this.serialize());
     }
 }

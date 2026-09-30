@@ -1,5 +1,4 @@
 import { ModFile } from './mod-file';
-import { Clause, Container, Unit } from './node';
 import { keyword } from "./Value/Keyword";
 
 describe("ModFile", () => {
